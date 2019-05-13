@@ -1,7 +1,8 @@
 body, html{
-    width: 100;
+    width: 100%;
     padding: 0;
     margin: 0;
+    font-family: Arial;
 }
 
 .nav-items {
@@ -11,8 +12,7 @@ body, html{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    font-family: Arial;
-    font-size: 2 em;
+    
 }
 
 .nav-items a {
@@ -20,12 +20,9 @@ body, html{
     display: block;
     padding: 1em;
     color: white;
+    font-size: 2 em;
 }
 
 .nav-items a:hover{
     text-decoration: underline;
-}
-
-.title{
-    
 }
