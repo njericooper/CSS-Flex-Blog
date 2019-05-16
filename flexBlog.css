@@ -33,6 +33,7 @@ body, html {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/2234006/pexels-photo-2234006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    min-height: 5rem;
     height: 50%;
     align-self: center;
     background-repeat: no-repeat;
@@ -40,6 +41,7 @@ body, html {
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
+    width: 100%
 }
       
 .hero-text {
@@ -52,45 +54,70 @@ body, html {
     font-size:50px;
 }
     
-  .heightx100{
+.heightx100{
     height: 100px;
-  }
+}
   
-  .heightx200{
+.heightx200{
     height: 200px;
-  }
+}
   
-  .leftcolumn {   
+.article-link {
+    text-decoration: none;
+    color: white;
+}
+
+.article-header {
+    cursor: pointer;
+}
+
+.leftcolumn {   
     flex-grow: 2;
     flex-shrink: 1;
-  }
+}
     
-  .rightcolumn {
-    padding-top: 5%;
+.rightcolumn {
+    padding-top: 5.9%;
     flex-grow: 1;
     flex-shrink: 1;
-    padding-right: 5%;
-  }
+   /* padding-right: 5%; */
+}
     
-  .row {
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-  }
+}
 
-  .fakeimg {
-    width: 100%;
+button {
+    background-color: black;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border-radius: 4px;
+    color: white;
+    border: 2px solid #FFFFFF;
+}
+
+button:hover {
+    background-color: #6A7;
+    color: white;
+    border: 2px solid black;
+}
+
+.fakeimg {
+    /* width: 100%; */
     padding: 20px;
     background: #6A7;
-  }
+    cursor: pointer;
+}
   
-  .card {
+.card {
     padding: 5%;
     margin-top: 5%;
-  }
+}
   
-  .footer {
+.footer {
     align-content: center;
     text-align: center;
   }
