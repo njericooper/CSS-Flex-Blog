@@ -3,6 +3,7 @@ body, html{
     padding: 0;
     margin: 0;
     font-family: Arial;
+    background: black;
 }
 
 .nav-items {
@@ -23,6 +24,112 @@ body, html{
     font-size: 2 em;
 }
 
-.nav-items a:hover{
-    text-decoration: underline;
+input {
+    opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-link {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    
+    .menu-link:hover {
+      color: #6a7;
+    }
+    
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      position: fixed; /*stops scroll on mobile*/
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  
+
+    .nav-container input {
+      width: 3em;
+      height: 3em;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2; 
+      -webkit-touch-callout: none;
+      overflow: hidden;
+    }
+    
+    .nav-container .menu-span { /*open close toggle*/
+        width: 2.1em;
+        height: .3em;
+        margin-bottom: .3em;
+        position: relative;
+        background: white;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+               
+    }
+    
+    .nav-container .menu-span:first-child {
+      transform-origin: 0% 0%;
+    }
+    
+    .nav-container .menu-span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    
+    .nav-container input:checked ~ .menu-span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: black;
+    }
+    
+    .nav-container input:checked ~ .menu-span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    .nav-container input:checked ~ .menu-span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    
+    .nav-items {
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: white;
+        list-style-type: none;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    .nav-items {
+        list-style: none;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center; 
+    }
+    
+    .nav-items a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: black;
+        font-size: 1.3em;
+    }
+    
+    .nav-container input:checked ~ ul {
+      transform: none;
+    }
+    input {
+        opacity: 1;
+        
+    }
 }
