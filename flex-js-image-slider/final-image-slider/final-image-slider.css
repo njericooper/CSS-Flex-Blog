@@ -16,22 +16,20 @@ header {
     display: none;
 }
 
-  
-.plant-caption {
-    text-align: center;
-    color: red;
-    font-family: Impact, Charcoal, sans-serif;
-    text-shadow: 5px 5px 0px green;
-}
-
 .plant-carousel {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 70%;
+    height: 100%;
     cursor: pointer;
     overflow: hidden;
+}
+
+.plant-caption {
+    text-align: center;
+    color: red;
+    text-shadow: 5px 5px 0px green;
 }
 
 .plant-1, .plant-2, .plant-3 {
@@ -42,7 +40,8 @@ header {
 
 .prev, .next {
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: row;
     top: 50%;
     margin-top: -20px;
     width: 40px;
@@ -74,7 +73,6 @@ header {
 }
 
 .dot {
-    display: inline-block;
     width: 12px;
     height: 12px;
     background-color: blueviolet;
@@ -86,6 +84,8 @@ header {
 }
   
 .dot-container{
+    display: flex;
+    flex-basis: row wrap;
     position: absolute;
     width: 100px;
     left: 50%;
