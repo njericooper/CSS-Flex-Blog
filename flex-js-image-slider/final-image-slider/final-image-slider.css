@@ -55,16 +55,16 @@ html, body {
 
 .next {
     right: 20px;
-    border-bottom: 6px solid black;
-    border-right: 6px solid black;
+    border-bottom: 6px solid #66aa77;
+    border-right: 6px solid #66aa77;
     transform: rotate(-45deg);
     transition: right 0.5s;
 }
 
 .prev {
     left: 20px;
-    border-bottom: 6px solid black;
-    border-left: 6px solid black;
+    border-bottom: 6px solid #66aa77;
+    border-left: 6px solid #66aa77;
     transform: rotate(45deg);
     transition: left 0.5s;
 }
@@ -92,7 +92,7 @@ html, body {
     display: flex;
     flex-basis: row wrap;
     position: absolute;
-    justify-content: center; /* horizontally centers*/
+    justify-content: center;
     width: 100%;
     bottom: 1.5em;
 }
