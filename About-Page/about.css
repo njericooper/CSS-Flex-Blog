@@ -85,6 +85,9 @@ input {
 }
 
 .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     display: flex;
     flex-basis: row wrap;
     border-top: 1px solid #8c8b8b;
@@ -92,7 +95,9 @@ input {
     background: white;
     height: 2em;
     justify-content: space-around;
-    padding: 2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    overflow: hidden;
 }
 
 footer>a{
